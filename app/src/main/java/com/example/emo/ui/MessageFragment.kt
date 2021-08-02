@@ -10,7 +10,7 @@ import com.example.emo.R
 
 class MessageFragment : Fragment() {
 
-    lateinit var  mybtn : Button
+
 
 
     override fun onCreateView(
@@ -18,8 +18,7 @@ class MessageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view =  inflater.inflate(R.layout.message_fragment, container, false)
-        mybtn = view.findViewById(R.id.button2)
-        return view
+        return inflater.inflate(R.layout.message_fragment, container, false)
+
     }
 }
