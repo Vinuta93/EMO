@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/taskcompleted"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginBottom="14dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="TASK COMPLETED"
+        android:textColor="#5E60CE"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+
+        android:textSize="30sp"
+        android:fontFamily="@font/comfortaa"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/angry_btn"
+        android:layout_marginTop="20dp"
+        android:text="New Task: Favourite character"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="40dp"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bluebutton"
+        />
+
+    <Button
+        android:id="@+id/btn2"
+        android:background="@drawable/greybutton"
+        android:text="Report this task"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+
+        />
+
+</LinearLayout>

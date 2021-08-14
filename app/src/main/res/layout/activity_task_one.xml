@@ -16,18 +16,17 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#D3D3D3"
+            android:background="@color/white"
+            app:theme="@style/ToolbarTheme"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="Activity One"
-                android:textColor="@color/black"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="What stress means to you ?"
+                android:textColor="#5E60CE"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -46,15 +45,28 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_width="match_parent"
-                android:src="@drawable/taskone"
+                android:src="@drawable/taskonebg"
                 android:scaleType="fitXY"
                 android:layout_height="match_parent"/>
             <ImageView
                 android:layout_width="wrap_content"
-                android:src="@drawable/submit"
-                android:layout_gravity="bottom|center"
+                android:src="@drawable/taskoneimg"
+                android:layout_gravity="center"
                 android:layout_marginBottom="3dp"
-                android:layout_height="wrap_content"/>
+                android:scaleType="fitXY"
+                android:layout_height="350dp"/>
+
+            <Button
+                android:id="@+id/angry_btn"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="40dp"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bluebutton"
+                />
 
 
         </FrameLayout>

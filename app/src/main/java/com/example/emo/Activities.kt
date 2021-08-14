@@ -12,9 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.emo.adapter.GridAdapter
 import com.example.emo.interfaces.OnGridItemClick
 import com.example.emo.model.GridItem
-import com.example.emo.ui.activities.TaskOne
-import com.example.emo.ui.activities.TaskThree
-import com.example.emo.ui.activities.TaskTwo
+import com.example.emo.ui.activities.*
 
 class Activities : AppCompatActivity(), OnGridItemClick {
 
@@ -41,12 +39,12 @@ class Activities : AppCompatActivity(), OnGridItemClick {
 
     private fun generateData() :List<GridItem> {
         return listOf(
-            GridItem(R.drawable.image, "Activity 1", "Description..."),
-            GridItem(R.drawable.image, "Activity 2", "Description..."),
-            GridItem(R.drawable.image, "Activity 3", "Description..."),
-            GridItem(R.drawable.image, "Activity 4", "Description..."),
-            GridItem(R.drawable.image, "Activity 5", "Description..."),
-            GridItem(R.drawable.image, "Activity 6", "Description..."),
+            GridItem(R.drawable.activityone, "Stress means to you?", "We have all been anxious or currently under a lot ...",R.drawable.heartred),
+            GridItem(R.drawable.activitytwo, "Know your emotions", "Choose any words you like to fill the blank cards...",R.drawable.heartgrey),
+            GridItem(R.drawable.activitythree, "Your fav character", "If you were a character what would you like to be...",R.drawable.heartgrey),
+            GridItem(R.drawable.activityfour, "Create your garden", "Create your garden by using the color after click...",R.drawable.heartgrey),
+            GridItem(R.drawable.activityfive, "Letter to future self", "What advice you will give it to your future self ?",R.drawable.heartred),
+            GridItem(R.drawable.activitysix, "Blank Cards", "Take a picture of any thing you feel you are grateful.",R.drawable.heartgrey),
 
 
             )
@@ -67,10 +65,10 @@ class Activities : AppCompatActivity(), OnGridItemClick {
 
             }
             3 -> {
-
+                startActivity(Intent(this, TaskFour::class.java))
             }
             4 -> {
-
+                startActivity(Intent(this, TaskFive::class.java))
             }
             5 -> {
 

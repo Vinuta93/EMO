@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">EMO</string>
+
+    <string-array name="steps">
+        <item> </item>
+        <item> </item>
+        <item> </item>
+
+
+    </string-array>
+    <string-array name="steps2">
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+
+    </string-array>
 </resources>

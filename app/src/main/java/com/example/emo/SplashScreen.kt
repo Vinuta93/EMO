@@ -8,9 +8,9 @@ import android.os.Looper
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.FrameLayout
 import android.widget.ImageSwitcher
 import android.widget.ImageView
-import android.widget.ViewSwitcher
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -27,12 +27,14 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         imageSwitcher = findViewById(R.id.imgSwitcher)
+
         val inn: Animation = AnimationUtils.loadAnimation(this, R.anim.transition_in)
         val out: Animation = AnimationUtils.loadAnimation(this, R.anim.transition_out)
+
         imageSwitcher.inAnimation = inn
         imageSwitcher.outAnimation = out
 
-
+        // Enabling Screening to Full Screen Mode
         val decorView: View = window.decorView
         val uiOption1: Int = View.SYSTEM_UI_FLAG_FULLSCREEN
         val uiOptions: Int = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -41,7 +43,6 @@ class SplashScreen : AppCompatActivity() {
         decorView.setSystemUiVisibility(uiOption1)
 
         imageSwitcherHandler = Handler(Looper.getMainLooper())
-
         imageSwitcher.setFactory {
             ImageView(
                 applicationContext
@@ -53,7 +54,7 @@ class SplashScreen : AppCompatActivity() {
             startActivity(mainIntent)
             finish()
 
-        }, 3000)
+        }, 9000)
 
 
         imageSwitcherHandler!!.post(object : Runnable {

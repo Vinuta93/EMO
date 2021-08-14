@@ -35,12 +35,14 @@ class GridAdapter(ctx: Context, items: List<GridItem>?, private var clickListene
 
     class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var image: ImageView? = null
+        var icon :ImageView? = null
         var imageText1: TextView? = null
         var imageText2: TextView? = null
         init {
             image = itemView.findViewById(R.id.item_image)
             imageText1 = itemView.findViewById(R.id.item_text1)
             imageText2 = itemView.findViewById(R.id.item_text2)
+            icon = itemView.findViewById(R.id.icon)
 
         }
         fun initialize(item:GridItem, action: OnGridItemClick){
@@ -48,10 +50,17 @@ class GridAdapter(ctx: Context, items: List<GridItem>?, private var clickListene
             image?.setImageResource(item.imageID)
             imageText1?.text = item.firstText
             imageText2?.text = item.secondText
-
+            if (adapterPosition % 2 == 0)
+                icon?.setImageResource(item.icon)
+            else
+                icon?.setImageResource(item.icon)
             itemView.setOnClickListener {
                 action.onGridItemClick(item,adapterPosition)
             }
+
+
+
+
         }
 
     }

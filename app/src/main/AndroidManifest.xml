@@ -9,16 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EMO">
+        <activity android:name=".ui.activities.tasktwosubactivities.TaskTwoSubActivity"></activity>
+        <activity android:name=".ui.activities.taskfoursubactivities.TaskFourSubActivity" />
+        <activity android:name=".ui.activities.taskfivesubactivities.TaskFiveSubActivity" />
+        <activity android:name=".ui.activities.taskthreesubactivities.subfragments.TaskCompleted" />
+        <activity android:name=".ui.activities.taskthreesubactivities.TaskThreeSubActivity" />
+        <activity android:name=".ui.activities.TaskFive" />
+        <activity android:name=".ui.activities.TaskFour" />
         <activity android:name=".Activities" />
-        <activity android:name=".MainActivity"  android:launchMode="singleTop"> </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".ui.activities.TaskThree" />
         <activity android:name=".ui.activities.TaskTwo" />
         <activity android:name=".ui.activities.TaskOne" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
