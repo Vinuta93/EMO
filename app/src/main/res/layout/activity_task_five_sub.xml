@@ -63,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:gravity="top|left"
+            android:id="@+id/editText"
             android:hint="Enter Answer"
             android:autoLink="web"
             android:linksClickable="true"

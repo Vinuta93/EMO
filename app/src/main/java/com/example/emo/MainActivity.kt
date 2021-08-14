@@ -15,22 +15,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
-
-
     private lateinit var toolbarTitle: TextView
     private lateinit var toolbarImage: ImageView
     private var fragment: Fragment = HomeFragment()
     private lateinit var bottomNavigationView : BottomNavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         bottomNavigationView = findViewById(R.id.bottomNavigation)
         toolbarTitle = findViewById(R.id.toolbar_title)
         toolbarImage = findViewById(R.id.toolbar_img)
-
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         supportFragmentManager.beginTransaction().add(R.id.host_fragment, HomeFragment()).commit()
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
@@ -40,23 +34,18 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         when (item.itemId) {
             R.id.home -> {
                 fragment = HomeFragment()
-
             }
             R.id.journal -> {
                 fragment = JournalFragment()
-
             }
             R.id.message -> {
                 fragment = MessageFragment()
-
             }
             R.id.search -> {
                 fragment = SearchFragment()
-
             }
             R.id.profile -> {
                 fragment = ProfileFragment()
-
             }
         }
         supportFragmentManager.beginTransaction()
@@ -64,7 +53,4 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             .commit()
         return true
     }
-
-
-
 }

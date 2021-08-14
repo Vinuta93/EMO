@@ -19,7 +19,6 @@ class FirstQuesFragment :Fragment() {
     lateinit var editText2 : TextInputEditText
     var allow : Boolean = false
     var allow2 : Boolean = false
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,41 +33,27 @@ class FirstQuesFragment :Fragment() {
             if (allow && allow2)
             fragmentManager?.beginTransaction()?.replace(R.id.host_fragment2, SecondQuesFragment())?.commit()
         }
-
         editText.addTextChangedListener( object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("Not yet implemented")
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                TODO("Not yet implemented")
             }
-
             override fun afterTextChanged(s: Editable?) {
                 if (s != null) {
-                    allow = s.length >10
+                    allow = s.length >=3
                 }
             }
-
         })
-
         editText2.addTextChangedListener( object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("Not yet implemented")
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                TODO("Not yet implemented")
             }
-
             override fun afterTextChanged(s: Editable?) {
                 if (s != null) {
-                    allow2 = s.length >10
+                    allow2 = s.length >=3
                 }
             }
-
         })
-
-
         return view    }
 }

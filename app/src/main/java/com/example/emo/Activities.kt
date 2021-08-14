@@ -15,10 +15,8 @@ import com.example.emo.model.GridItem
 import com.example.emo.ui.activities.*
 
 class Activities : AppCompatActivity(), OnGridItemClick {
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var toolbar: Toolbar
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,16 +25,11 @@ class Activities : AppCompatActivity(), OnGridItemClick {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-
-
         recyclerView = findViewById(R.id.rv)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = GridAdapter(this, generateData(), this )
 
     }
-
-
     private fun generateData() :List<GridItem> {
         return listOf(
             GridItem(R.drawable.activityone, "Stress means to you?", "We have all been anxious or currently under a lot ...",R.drawable.heartred),
@@ -45,10 +38,7 @@ class Activities : AppCompatActivity(), OnGridItemClick {
             GridItem(R.drawable.activityfour, "Create your garden", "Create your garden by using the color after click...",R.drawable.heartgrey),
             GridItem(R.drawable.activityfive, "Letter to future self", "What advice you will give it to your future self ?",R.drawable.heartred),
             GridItem(R.drawable.activitysix, "Blank Cards", "Take a picture of any thing you feel you are grateful.",R.drawable.heartgrey),
-
-
             )
-
     }
 
     override fun onGridItemClick(item: GridItem, position: Int) {
@@ -78,17 +68,11 @@ class Activities : AppCompatActivity(), OnGridItemClick {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
-
-       // Toast.makeText(this, "dsc", Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, MainActivity::class.java))
-
-
-
         return true
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-
     }
 }

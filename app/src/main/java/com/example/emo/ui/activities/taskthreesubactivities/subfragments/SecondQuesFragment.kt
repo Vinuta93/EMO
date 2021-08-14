@@ -38,11 +38,10 @@ class SecondQuesFragment : Fragment() {
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
 
-                // TODO Auto-generated method stub
             }
 
             override fun afterTextChanged(s: Editable) {
-                allow = s.length >10
+                allow = s.length >=5
             }
         })
         return view    }
