@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/angry_btn"
+        android:id="@+id/btn"
         android:layout_marginTop="20dp"
         android:text="New Task: Favourite character"
         android:textColor="#FFFFFF"
@@ -40,7 +40,7 @@
     <Button
         android:id="@+id/btn2"
         android:background="@drawable/greybutton"
-        android:text="Report this task"
+        android:text="Repeat this task"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:layout_gravity="bottom|center"
